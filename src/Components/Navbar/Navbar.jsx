@@ -1,10 +1,13 @@
 import React from "react";
-import "./Navbar/Navbar.css";
+import "./Navbar.css";
+import logo from "../../img/Abbir_Ali_logo.png";
 const Navbar = () => {
   return (
     <div className="n-wrapper">
       <div className="n-left">
-        <div className="n-name">Abbir Ali</div>
+        <div className="n-name">
+          <a href="/"><img src={ logo } alt="" /></a>
+        </div>
         <span>Toogle</span>
       </div>
       <div className="n-right">

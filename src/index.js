@@ -1,10 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import { createRoot } from "react-dom/client"; // Adjusted import path
+import App from "./App";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-ReactDOM.render(
-    <App />,
-  document.getElementById('root')
+// Use createRoot instead of ReactDOM.render
+createRoot(document.getElementById("root")).render(
+  <>
+    <App />
+    <ToastContainer />
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function

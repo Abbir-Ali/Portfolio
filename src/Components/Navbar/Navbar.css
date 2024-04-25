@@ -1,7 +1,8 @@
 .n-wrapper{
-    height: 10vh;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+   
 }
 
 .n-left{
@@ -10,9 +11,10 @@
     display: flex;
     gap: 2rem;
 }
-.n-name{
-font-size: 1.3rem;
-font-weight: bold;
+.n-name img{
+    width: 150px; /* Adjust width of the logo */
+    height: 150px; /* Maintain aspect ratio */
+
 }
 
 
