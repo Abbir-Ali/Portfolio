@@ -14,7 +14,7 @@
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  margin-top: 6rem;
+  margin-top: 4rem;
   gap: 2rem;
   color: white;
 }
@@ -52,5 +52,7 @@
   .social-link {
     transform: scale(0.7);
     margin-top: -50px;
+  
   }
+ 
 }
