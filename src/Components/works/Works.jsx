@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Works.css";
 import Upwork from "../../img/Upwork.png";
 import Fiverr from "../../img/fiverr.png";
 import Moboroid from "../../img/moboroid.png";
 import Facebook from "../../img/Facebook.png";
 import Renegade from "../../img/renegade.jpeg";
+import { DarkModeContext } from "../../DarkModeContext";
+import { motion } from "framer-motion";
+
 
 const Works = () => {
+  const theme =useContext(DarkModeContext);
+  const darkMode= theme.state.darkMode;
   return (
     <div className="works">
       {/* left side */}
       <div className="awesome">
-        <span>Works For All These !</span>
-        <span>Brand & Clients</span>
-        <span>
+        <span className="heading" style={{color : darkMode? 'white' : 'black'}}>Works For All These !</span>
+        <span className="heading" >Brand & Clients</span>
+        <span className="description">
           I've collaborated with diverse international clients, specializing in
           WordPress development. With a knack for custom coding, I've crafted
           bespoke websites and provided meticulous bug fixes. Prior to this, I
@@ -31,7 +36,14 @@ const Works = () => {
 
       {/* Right Side */}
       <div className="w-right">
-        <div className="w-mainCircle">
+        <motion.div 
+        
+        initial={{rotate:45}}
+        animate={{rotate:0}}
+        viewport={{margin:'-40px'}}
+        transition={{duration:3.5,type:'spring'}}
+        
+        className="w-mainCircle">
           <div className="w-secCircle">
             <img src={Upwork} alt="" />
           </div>
@@ -50,7 +62,7 @@ const Works = () => {
           <div className="w-secCircle">
             <img src={Facebook} alt="" />
           </div>
-        </div>
+        </motion.div>
         {/* BACKGROUND CIRCLE */}
         
 

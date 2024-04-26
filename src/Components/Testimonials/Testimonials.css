@@ -51,6 +51,8 @@
     width: 6rem;
     height: 6rem;
     border-radius: 100%;
+    border: 5px solid var(--orange);
+    padding: 4px;
 }
 
 .testimonials>span {
@@ -72,4 +74,20 @@
 
 .t-wrapper .swiper-pagination-bullet-active {
     background: var(--orange);
+}
+
+@media screen and (max-width: 480px) {
+    
+    .t-wrapper{
+        padding: 0;
+    }
+    .testimonials>img{
+        width: 80px;
+        height: 80px;
+        border: 4px solid var(--orange);
+        padding: 4px;
+    }
+    .testimonials{
+        padding: 22px;
+    }
 }

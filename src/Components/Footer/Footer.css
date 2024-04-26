@@ -1,0 +1,56 @@
+.footer {
+  display: flex;
+  align-items: center;
+  margin: -0.5rem -3.5rem;
+  position: relative;
+  margin-top: -7rem;
+
+}
+
+.f-content {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 6rem;
+  gap: 2rem;
+  color: white;
+}
+
+.email-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  /* Smooth transition for color change */
+}
+
+.email-link:hover {
+  color: #3e1ba0;
+  /* Change color on hover */
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+  /* Adjust the gap between icons */
+}
+
+.social-link {
+  text-decoration: none;
+  transition: transform 0.3s ease;
+  /* Smooth transition for transform */
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+  /* Move the icon up slightly on hover */
+}
+
+@media screen and (max-width: 480px) {
+  .social-link {
+    transform: scale(0.7);
+    margin-top: -50px;
+  }
+}

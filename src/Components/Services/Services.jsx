@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Services.css";
 import HeartEmoji from "../../img/heartemoji.png";
 import Humble from "../../img/humble.png";
 import Glasses from "../../img/glasses.png";
 import Card from "../Card/Card";
 import Resume from "./Resume.pdf";
+import { DarkModeContext } from "../../DarkModeContext";
+import { motion } from "framer-motion";
 
+
+const transition = { duration: 2, type: "spring" };
 const Services = () => {
+  const theme =useContext(DarkModeContext);
+  const darkMode= theme.state.darkMode;
   return (
-    <div className="services">
+    <div className="services" id="Services">
       {/* left side */}
 
       <div className="awesome">
-        <span>My Awesome</span>
+        <span style={{color : darkMode? 'white' : 'black'}}>My Awesome</span>
         <span>Services</span>
         <span>
           I Deliver web development and designing services utilizing modern,
@@ -28,25 +34,40 @@ const Services = () => {
 
       {/* right Side */}
       <div className="cards">
-        <div style={{ left: "10rem" }}>
+        <motion.div
+         initial={{ left: "25%" }}
+         animate={{ left: "8rem" }}
+         transition={transition}
+        
+        style={{ left: "10rem" }}>
           <Card
             emoji={HeartEmoji}
             heading={"Design"}
             detail={"Figma, Canva, Photoshop "}
           />
-        </div>
+        </motion.div>
 
         {/* Second Card */}
-        <div style={{ top: "10rem", left: "-3rem" }}>
+        <motion.div
+        initial={{ left: "-15%" }}
+        animate={{ left: "-4rem" }}
+        transition={transition}
+        
+        style={{ top: "10rem", left: "-3rem" }}>
           <Card
             emoji={Glasses}
             heading={"Developer"}
             detail={"HTMl, CSS, JavaScript, Reactjs"}
           />
-        </div>
+        </motion.div>
 
         {/* Third Card */}
-        <div style={{ top: "19rem", left: "11rem" }}>
+        <motion.div
+        initial={{ }}
+        animate={{ top: "15rem" }}
+        transition={transition}
+        
+        style={{ top: "19rem", left: "11rem" }}>
           <Card
             emoji={Humble}
             heading={"UI/UX"}
@@ -54,7 +75,7 @@ const Services = () => {
               "Designing intuitive interfaces that elevate user experiences with precision"
             }
           />
-        </div>
+        </motion.div>
         <div className="blur s-blur2" style={{background:'var(--purple)'}}></div>
       </div>
     </div>
