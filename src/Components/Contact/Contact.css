@@ -2,8 +2,8 @@
     padding: 0 3rem 0 3rem;
     display: flex;
     font-display: auto;
-    height: 90vh;
-    margin:  5rem 0 8rem 0 ;
+    height: 50vh;
+    margin:  2rem 0 2rem 0 ;
  
    
   
@@ -49,6 +49,7 @@ textarea{
 @media screen and (max-width:480px) {
     .contact-container{
       flex-direction: column;
+      height: 90vh;
  
     }
     .c-right .user{

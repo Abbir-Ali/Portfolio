@@ -3,7 +3,7 @@ import "./Navbar.css";
 import logo from "../../img/AB_logo.png";
 import { Toogle } from "../Toogle/Toogle";
 import { Link } from "react-scroll";
-import Portfolio from "../Portfolio/Portfolio";
+
 
 
 const Navbar = () => {
